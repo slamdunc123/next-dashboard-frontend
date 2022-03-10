@@ -1,12 +1,8 @@
 import React from 'react';
+import Sidebar from '../Sidebar/Sidebar';
 
-const Layout = ({ children }) => {
-	return (
-		<>
-			<div>Layout</div>
-			<main>{children}</main>
-		</>
-	);
+const Layout = ({ children }: any) => {
+	return <Sidebar>{children}</Sidebar>;
 };
 
 export default Layout;
