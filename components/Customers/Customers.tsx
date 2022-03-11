@@ -19,7 +19,7 @@ const Customers = () => {
 	return (
 		<>
 			{console.log(customers)}
-			<div>customers</div>
+			
 			<CustomersDataGrid customers={customers}/>
 			
 		</>

@@ -15,13 +15,12 @@ import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 import ListItem from '@mui/material/ListItem';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
-import InboxIcon from '@mui/icons-material/MoveToInbox';
-import MailIcon from '@mui/icons-material/Mail';
-import Customers from '../Customers/Customers';
 import PeopleIcon from '@mui/icons-material/People';
+import EqualizerIcon from '@mui/icons-material/Equalizer';
+import CategoryIcon from '@mui/icons-material/Category';
 import Link from 'next/link';
 
-const drawerWidth = 150;
+const drawerWidth = 200;
 
 const Main = styled('main', { shouldForwardProp: (prop) => prop !== 'open' })<{
 	open?: boolean;
@@ -72,7 +71,7 @@ const DrawerHeader = styled('div')(({ theme }) => ({
 	justifyContent: 'flex-end',
 }));
 
-export default function PersistentDrawerLeft({ children }) {
+export default function Sidebar({ children }) {
 	const theme = useTheme();
 	const [open, setOpen] = React.useState(false);
 
@@ -128,13 +127,30 @@ export default function PersistentDrawerLeft({ children }) {
 				<Divider />
 				<List>
 					<Link href='/customers' passHref>
-						<ListItem button component='a'>
+						<ListItem button component='a' sx={{
+                            display: 'flex',
+                            alignItems: 'center'
+                        }}>
+							<ListItemIcon>
+								<PeopleIcon />
+							</ListItemIcon>
 							<ListItemText primary='Customers' />
 						</ListItem>
 					</Link>
-					<Link href='/tests' passHref>
+					<Link href='/analytics' passHref>
 						<ListItem button component='a'>
-							<ListItemText primary='Tests' />
+                        <ListItemIcon >
+								<EqualizerIcon />
+							</ListItemIcon>
+							<ListItemText primary='Analytics' />
+						</ListItem>
+					</Link>
+					<Link href='/products' passHref>
+						<ListItem button component='a'>
+                        <ListItemIcon >
+								<CategoryIcon />
+							</ListItemIcon>
+							<ListItemText primary='Products' />
 						</ListItem>
 					</Link>
 				</List>

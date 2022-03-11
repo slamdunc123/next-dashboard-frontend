@@ -23,7 +23,7 @@
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx"
-, "components/Customers/CustomersDataGrid.tsx"  ],
+, "components/Customers/CustomersDataGrid.tsx", "components/Analytics/PieChart.js"  ],
   "exclude": [
     "node_modules"
   ]

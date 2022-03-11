@@ -1,10 +1,12 @@
-import Customers from '../components/Customers/Customers'
+import Customers from '../components/Customers/Customers';
 
 const customers = () => {
+	return (
+		<>
+			<h3>Customers</h3>
+			<Customers />
+		</>
+	);
+};
 
-  return (
-    <Customers />
-  )
-}
-
-export default customers
+export default customers;
