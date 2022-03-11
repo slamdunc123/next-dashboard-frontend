@@ -21,7 +21,7 @@ import Customers from '../Customers/Customers';
 import PeopleIcon from '@mui/icons-material/People';
 import Link from 'next/link';
 
-const drawerWidth = 240;
+const drawerWidth = 150;
 
 const Main = styled('main', { shouldForwardProp: (prop) => prop !== 'open' })<{
 	open?: boolean;
